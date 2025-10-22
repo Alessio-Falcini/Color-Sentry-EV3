@@ -32,20 +32,20 @@ The Client application runs on a standard PC.
 
 ## 3. Project Structure
 
-The repository is organized to clearly separate the platform-specific codebases and documentation:
+The repository is organized to clearly separate the platform-specific codebases and documentation.
 
-| Path | Tipo | Contenuto e Scopo |
+| Path | Type | Content and Purpose |
 | :--- | :--- | :--- |
-| **`Color-Sentry-EV3/`** | Repository Root | Cartella principale del progetto. |
-| ├── **`client/`** | Cartella | Contiene il codice dell'applicazione **Client** per PC (interfaccia grafica). |
-| │   ├── `gui_colori.py` | File Python | L'interfaccia grafica principale (GUI) in **Tkinter** e la logica per la gestione del **Socket Client**. |
-| │   └── `requirements.txt` | File di Testo | Elenco delle librerie Python richieste per il client (es. `Pillow`). |
-| ├── **`ev3-server/`** | Cartella | Contiene il codice dell'applicazione **Server** per il robot EV3. |
-| │   └── `main.py` | File Python | Il cuore del codice **Pybricks** dell'EV3: inizializzazione sensore, controllo motore e logica del **Socket Server**. |
-| ├── **`docs/`** | Cartella | Contiene la documentazione approfondita del progetto. |
-| │   └── `Tesi d'Informatica LegoEV3.pdf` | Documento | La tesi o relazione completa del progetto, contenente analisi architetturali e risultati. |
-| ├── `.gitignore` | Configurazione | Indica a Git quali file e directory temporanee (`__pycache__`, file di sistema, ecc.) ignorare durante il commit. |
-| └── `LICENSE` | Licenza | Contiene i termini della **MIT License** che definiscono come il codice può essere utilizzato e distribuito da altri. | 
+| **`Color-Sentry-EV3/`** | Repository Root | The main project directory. |
+| ├── **`client/`** | Folder | Contains the code for the **Client** application on the PC (Graphical User Interface). |
+| │   ├── `gui_colori.py` | Python File | The main GUI in **Tkinter** and the logic for managing the **Socket Client**. |
+| │   └── `requirements.txt` | Text File | List of Python libraries required for the client (e.g., `Pillow`). |
+| ├── **`ev3-server/`** | Folder | Contains the code for the **Server** application running on the EV3 robot. |
+| │   └── `main.py` | Python File | The core **Pybricks** code for the EV3: sensor initialization, motor control, and **Socket Server** logic. |
+| ├── **`docs/`** | Folder | Contains in-depth project documentation. |
+| │   └── `Tesi d'Informatica LegoEV3.pdf` | Document | The complete thesis or project report, containing architectural analysis and results. |
+| ├── `.gitignore` | Configuration | Instructs Git which temporary files and directories (`__pycache__`, system files, etc.) to ignore during commits. |
+| └── `LICENSE` | License | Contains the terms of the **MIT License**, defining how the code may be used and distributed by others. |
 ## 4. Setup and Execution Instructions
 
 ### 4.1. Hardware and Software Prerequisites
