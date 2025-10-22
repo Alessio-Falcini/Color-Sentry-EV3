@@ -62,8 +62,6 @@ The repository is organized to clearly separate the platform-specific codebases 
 
 ### 4.3. PC Client Initialization
 
-### 4.3. PC Client Initialization
-
 1.  **Dependencies:** This project requires Python 3.x dependencies for the Graphical User Interface (GUI). Install the necessary libraries listed in `requirements.txt`:
     ```bash
     pip install -r client/requirements.txt
