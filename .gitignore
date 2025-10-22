@@ -1,0 +1,36 @@
+# Python
+# Designed to ignore all files that are not essential for the source code.
+
+# Compiled Python bytecode and cache folders
+*.pyc
+*.pyd
+*.pyo
+__pycache__/
+
+# Virtual Environments
+# Ignore virtual environment folders, crucial for repository cleanliness
+venv/
+.venv/
+env/
+.env
+
+# Dependencies and installation packages
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Log and database files
+*.log
+*.sqlite
+*.db
+
+# IDE Configuration Files (Optional but recommended)
+.vscode/        # Visual Studio Code
+.idea/          # JetBrains IDEs (PyCharm, IntelliJ, etc.)
+*.sublime-project
+*.sublime-workspace
+
+# Temporary System Files
+.DS_Store       # macOS files
+Thumbs.db       # Windows files
