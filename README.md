@@ -19,8 +19,8 @@ The EV3 Brick runs the server application, built using **Pybricks (Micropython)*
 * **Role:** Data acquisition (Color Sensor on Port S1) and actuation (Motor control on Port D).
 * **Mechanism:** Initializes a **Socket Server** and manages the continuous communication loop.
 * **Operation:**
-    **Data Stream (EV3 $\rightarrow$ Client):** Reads the current color and transmits the color name as a string in real-time.
-    **Command Stream (Client $\rightarrow$ EV3):** Receives discrete commands (e.g., `START_MOTOR`, `STOP_MOTOR`) and executes them via the Motor device interface.
+  **Data Stream (EV3 $\rightarrow$ Client):** Reads the current color and transmits the color name as a string in real-time.
+  **Command Stream (Client $\rightarrow$ EV3):** Receives discrete commands (e.g., `START_MOTOR`, `STOP_MOTOR`) and executes them via the Motor device interface.
 
 ### 2.2. Client Component (PC)
 
