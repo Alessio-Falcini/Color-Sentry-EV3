@@ -62,18 +62,22 @@ The repository is organized to clearly separate the platform-specific codebases 
 
 ### 4.3. PC Client Initialization
 
-1.  **Dependencies:** This project primarily requires **Pillow (PIL)** for graphical assets, as Tkinter is standard. Install it using pip. If you create the `requirements.txt` file (recommended), use the second command:
-    ```bash
-    pip install Pillow
-    # Opzionale: Se crei il file 'requirements.txt' con 'Pillow', usa:
-    # pip install -r client/requirements.txt
-    ```
-2.  **Configuration:** **Crucially**, update the `SERVER_IP` variable within `client/gui_colori.py` to match the **IP Address** of your EV3 Brick.
-3.  **Execution:** Launch the application from the command line:
-    ```bash
-    python client/gui_colori.py
-    ```
-4.  **Operation:** Use the dedicated buttons within the GUI to initiate the socket connection, observe the real-time color stream, and transmit motor control commands remotely.
+### 4.3. PC Client Initialization
+
+1.  **Dependencies:** This project requires Python 3.x dependencies for the Graphical User Interface (GUI). Install the necessary libraries listed in `requirements.txt`:
+    ```bash
+    pip install -r client/requirements.txt
+    ```
+    *(Note: The primary external dependency is **Pillow (PIL)** for handling graphical assets, while Tkinter is included in standard Python 3 distributions.)*
+
+2.  **Configuration:** Crucially, update the **`SERVER_IP`** variable within the file **`client/gui_colori.py`** to match the **IP Address** of your EV3 Brick on the network.
+
+3.  **Execution:** Launch the application from your command-line interface (CLI):
+    ```bash
+    python client/gui_colori.py
+    ```
+
+4.  **Operation:** Use the dedicated buttons within the GUI to initiate the socket connection, observe the real-time color stream, and transmit motor control commands remotely to the EV3 server.
 
 ## 5. Documentation and License
 
