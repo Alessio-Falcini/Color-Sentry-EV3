@@ -1,4 +1,4 @@
-# Color-Sentry-EV3: High-Performance Client-Server Robotics System
+# Color-Sentry-EV3
 
 > A real-time, **bi-directional Client-Server** system developed for the **LEGO Mindstorms EV3** platform, utilizing **TCP/IP Sockets**. The **EV3 (Pybricks Server)** acts as a digital sentry, streaming **real-time color readings** from its sensor. The **Desktop GUI (Python/Tkinter Client)** provides visualization, user control, and the capability to transmit **remote motor control commands** back to the robot.
 
