@@ -8,29 +8,7 @@
 
 This project was developed as a laboratory exercise to demonstrate the implementation of a robust, low-latency communication model within a robotics context. It successfully bridges the gap between the embedded environment of the EV3 and a feature-rich desktop application, focusing on network-enabled remote control and sensing capabilities.
 
-## 2. Core Architecture: TCP/IP Client-Server Model
-
-The system operates based on a strict two-component TCP/IP architecture, ensuring modularity and clear separation of concerns. The communication is established over a local network (e.g., Wi-Fi or USB tethering), with the EV3 listening on **Port 12345** (as defined in `ev3-server/main.py`).
-
-### 2.1. Server Component (EV3)
-
-The EV3 Brick runs the server application, built using **Pybricks (Micropython)**.
-
-* **Role:** Data acquisition (Color Sensor on Port S1) and actuation (Motor control on Port D).
-* **Mechanism:** Initializes a **Socket Server** and manages the continuous communication loop.
-* **Operation:**
-**Data Stream (EV3 $\rightarrow$ Client):** Reads the current color and transmits the color name as a string in real-time.
-**Command Stream (Client $\rightarrow$ EV3):** Receives discrete commands (e.g., `START_MOTOR`, `STOP_MOTOR`) and executes them via the Motor device interface.
-
-### 2.2. Client Component (PC)
-
-The Client application runs on a standard PC.
-
-* **Role:** User Interface, real-time data visualization, and remote command transmitter.
-* **Interface:** Built with **Python's Tkinter** (included in standard Python 3) for the framework and **Pillow (PIL)** for custom graphics and visual theme implementation.
-* **Mechanism:** Establishes a **Socket Client** connection to the EV3's IP address. It utilizes **threading** to process continuous socket data reception without interrupting the main Graphical User Interface (GUI) thread.
-
-## 3. Project Structure
+## 2. Project Structure
 
 The repository is organized to clearly separate the platform-specific codebases and documentation.
 
@@ -42,10 +20,31 @@ The repository is organized to clearly separate the platform-specific codebases 
 | │   └── `requirements.txt` | Text File | List of Python libraries required for the client (e.g., `Pillow`). |
 | ├── **`ev3-server/`** | Folder | Contains the code for the **Server** application running on the EV3 robot. |
 | │   └── `main.py` | Python File | The core **Pybricks** code for the EV3: sensor initialization, motor control, and **Socket Server** logic. |
-| ├── **`docs/`** | Folder | Contains in-depth project documentation. |
-| │   └── `Tesi d'Informatica LegoEV3.pdf` | Document | The complete thesis or project report, containing architectural analysis and results. |
 | ├── `.gitignore` | Configuration | Instructs Git which temporary files and directories (`__pycache__`, system files, etc.) to ignore during commits. |
 | └── `LICENSE` | License | Contains the terms of the **MIT License**, defining how the code may be used and distributed by others. |
+
+## 3. Core Architecture: TCP/IP Client-Server Model
+
+The system operates based on a strict two-component TCP/IP architecture, ensuring modularity and clear separation of concerns. The communication is established over a local network (e.g., Wi-Fi or USB tethering), with the EV3 listening on **Port 12345** (as defined in `ev3-server/main.py`).
+
+### 3.1. Server Component (EV3)
+
+The EV3 Brick runs the server application, built using **Pybricks (Micropython)**.
+
+* **Role:** Data acquisition (Color Sensor on Port S1) and actuation (Motor control on Port D).
+* **Mechanism:** Initializes a **Socket Server** and manages the continuous communication loop.
+* **Operation:**
+**Data Stream (EV3 $\rightarrow$ Client):** Reads the current color and transmits the color name as a string in real-time.
+**Command Stream (Client $\rightarrow$ EV3):** Receives discrete commands (e.g., `START_MOTOR`, `STOP_MOTOR`) and executes them via the Motor device interface.
+
+### 3.2. Client Component (PC)
+
+The Client application runs on a standard PC.
+
+* **Role:** User Interface, real-time data visualization, and remote command transmitter.
+* **Interface:** Built with **Python's Tkinter** (included in standard Python 3) for the framework and **Pillow (PIL)** for custom graphics and visual theme implementation.
+* **Mechanism:** Establishes a **Socket Client** connection to the EV3's IP address. It utilizes **threading** to process continuous socket data reception without interrupting the main Graphical User Interface (GUI) thread.
+
 ## 4. Setup and Execution Instructions
 
 ### 4.1. Hardware and Software Prerequisites
